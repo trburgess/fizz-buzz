@@ -23,7 +23,7 @@ class Processor
             throw new \InvalidArgumentException('To must be less than or equal to 100');
         }
         if ($to <= $from) {
-            throw new \InvalidArgumentException('From must be greater than or equal to 1');
+            throw new \InvalidArgumentException('To must be greater than From');
         }
         for ($i = $from; $i <= $to; $i++) {
             // Print out the number
