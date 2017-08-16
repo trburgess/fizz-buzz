@@ -21,6 +21,24 @@ class ProcessorTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue(class_exists(\FizzBuzz\Processor::class));
     }
 
+    public function testFizzBuzzProcessorFailsWithInvalidInputFrom()
+    {
+        $this->expectException(\InvalidArgumentException::class);
+        $this->processor->process(0, 100);
+    }
+
+    public function testFizzBuzzProcessorFailsWithInvalidInputTo()
+    {
+        $this->expectException(\InvalidArgumentException::class);
+        $this->processor->process(2, 1);
+    }
+
+    public function testFizzBuzzProcessorFailsWithFromAndToBeingEqual()
+    {
+        $this->expectException(\InvalidArgumentException::class);
+        $this->processor->process(1, 1);
+    }
+
     public function testFizzBuzzProcessorOutput()
     {
         $this->expectOutputString('1
