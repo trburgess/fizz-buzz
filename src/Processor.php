@@ -27,14 +27,14 @@ class Processor
             print $i;
             if ($this->numberSatisfiesConstraint($i, 15)) {
                 // If a number is divisible by 5 and 3 it can only be divisible by 15 with no remainder
-                // therefore print `FizzBuzz`
-                print 'FizzBuzz';
+                // therefore print `fizzbuzz`
+                print 'fizzbuzz';
             } elseif ($this->numberSatisfiesConstraint($i, 3)) {
-                // If a number is divisible by 3 with no remainder print `Fizz`
-                print 'Fizz';
+                // If a number is divisible by 3 with no remainder print `fizz`
+                print 'fizz';
             } elseif ($this->numberSatisfiesConstraint($i, 5)) {
-                // If a number is divisible by 5 with no remainder print `Buzz`
-                print 'Buzz';
+                // If a number is divisible by 5 with no remainder print `buzz`
+                print 'buzz';
             }
             // Print out a new line
             print PHP_EOL;
