@@ -6,7 +6,7 @@ This is an implementation of the Fizz Buzz Test
 1. `composer require "trburgess/fizz-buzz:dev-master"`
 2. Create a new instance: `$fizzBuzzProcessor = new FizzBuzz\Processor;
 `
-3. Process the numbers: `$fizzBuzz->process(1, 100)`
+3. Process the numbers: `$fizzBuzzProcessor->process(1, 100)`
 
 ## License
 
