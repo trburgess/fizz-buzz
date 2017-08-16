@@ -30,6 +30,12 @@ class ProcessorTest extends \PHPUnit_Framework_TestCase
     public function testFizzBuzzProcessorFailsWithInvalidInputTo()
     {
         $this->expectException(\InvalidArgumentException::class);
+        $this->processor->process(1, 101);
+    }
+
+    public function testFizzBuzzProcessorFailsWithToLessThanFrom()
+    {
+        $this->expectException(\InvalidArgumentException::class);
         $this->processor->process(2, 1);
     }
 
