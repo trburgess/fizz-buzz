@@ -12,9 +12,16 @@ class Processor
      *
      * @param int $from
      * @param int $to
+     * @throws \InvalidArgumentException
      */
     public function process(int $from, int $to)
     {
+        if ($from < 1) {
+            throw new \InvalidArgumentException('From must be greater than or equal to 1');
+        }
+        if ($to <= $from) {
+            throw new \InvalidArgumentException('From must be greater than or equal to 1');
+        }
         for ($i = $from; $i <= $to; $i++) {
             // Print out the number
             print $i;
